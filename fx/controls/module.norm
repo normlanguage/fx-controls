@@ -1,0 +1,14 @@
+Module module() {
+  module(name: "fx.controls", version: 1, dependencies: [exportedDependency(repository: "github", name: "fx.graphics", version: 1)], binding: jarBinding(target: mavenJar(group: "org.openjfx", artifact: "javafx-controls", version: "25.0.2", resolution: sha256("f1e2ac58b6fc13433ddc3e8b99f202f2ba200ca4fd198370b4346883b8776f54")),
+    api: [
+      jarType(name: "Labeled", members: ["setText"]),
+      jarType(name: "Button", members: ["setOnAction", "fire", "setText"], overloads: [jarOverload(name: "new", parameterTypes: [])]),
+      jarType(name: "Label", members: ["setText"], overloads: [jarOverload(name: "new", parameterTypes: [])]),
+      jarType(name: "TextField", members: ["setOnAction", "textProperty", "getText", "setText", "setPromptText", "clear", "setMaxWidth"], overloads: [jarOverload(name: "new", parameterTypes: [])]),
+      jarType(name: "CheckBox", members: ["setText", "setSelected", "isSelected", "selectedProperty", "setMaxWidth"], overloads: [jarOverload(name: "new", parameterTypes: [])]),
+      jarType(name: "ScrollPane", members: ["setFitToWidth", "setHbarPolicy", "getContent", "setContent"], overloads: [jarOverload(name: "new", parameterTypes: [])]),
+      jarType(name: "ScrollPane.ScrollBarPolicy", members: []),
+      jarType(name: "Alert", members: ["initOwner", "setTitle", "setHeaderText", "setContentText", "setOnHidden", "show", "close"], overloads: [jarOverload(name: "new", parameterTypes: ["javafx.scene.control.Alert$AlertType"])]),
+      jarType(name: "Alert.AlertType", members: [])
+    ]))
+}
